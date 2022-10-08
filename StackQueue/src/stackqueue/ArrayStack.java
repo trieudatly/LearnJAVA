@@ -28,6 +28,7 @@ public class ArrayStack implements IArrayStack {
     public String pop() {
         if (!isEmpty()) {
             String value = stackArray[topIndex];
+            stackArray = Arrays.copyOf(stackArray, stackArray.length - 1);
             topIndex--;
             return value;
         }
