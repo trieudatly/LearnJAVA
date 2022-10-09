@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArrayStack implements IArrayStack {
 
-    private String[] stackArray = new String[0];
+    private String[] stackArray = new String[8];
     private int topIndex;
 
     ArrayStack() {
@@ -18,7 +18,11 @@ public class ArrayStack implements IArrayStack {
 
     @Override
     public boolean push(String value) {
-        stackArray = Arrays.copyOf(stackArray, stackArray.length + 1);
+        System.out.println("lenght " + stackArray.length + " index " + topIndex);
+        if (isFull()) {
+            stackArray = Arrays.copyOf(stackArray, stackArray.length * 2);
+            System.out.println("pushif lenght " + stackArray.length + " index " + topIndex);
+        }
         topIndex++;
         stackArray[topIndex] = value;
         return true;
@@ -28,8 +32,13 @@ public class ArrayStack implements IArrayStack {
     public String pop() {
         if (!isEmpty()) {
             String value = stackArray[topIndex];
-            stackArray = Arrays.copyOf(stackArray, stackArray.length - 1);
             topIndex--;
+            System.out.println("pop " + stackArray.length + " index " + topIndex);
+            if (stackArray.length / 4 == topIndex + 1 && stackArray.length > 8) {
+                stackArray = Arrays.copyOf(stackArray, stackArray.length / 2);
+                System.out.println("popif " + stackArray.length + " index " + topIndex
+                );
+            }
             return value;
         }
         return "";
@@ -54,5 +63,12 @@ public class ArrayStack implements IArrayStack {
             }
             return showArray;
         }
+    }
+
+    private boolean isFull() {
+        if (topIndex < stackArray.length - 1) {
+            return false;
+        }
+        return true;
     }
 }
