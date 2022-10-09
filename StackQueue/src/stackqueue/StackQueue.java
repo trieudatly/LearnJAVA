@@ -5,29 +5,29 @@ public class StackQueue {
     public static void main(String[] args) {
 //ArrayStack 
         ArrayStack arrayStack = new ArrayStack();
-        int loopPush = 100;
-        int loopPop = 100;
-        while (loopPush > 0) {
+        // int loopPush = 100;
+        // int loopPop = 100;
+        // while (loopPush > 0) {
 
-            System.out.println(arrayStack.push("facebook.com"));
-            loopPush--;
-        }
-        while (loopPop > 0) {
-            System.out.println(arrayStack.pop() + "\n");
-            loopPop--;
-        }
+        //     System.out.println(arrayStack.push("facebook.com"));
+        //     loopPush--;
+        // }
+        // while (loopPop > 0) {
+        //     System.out.println(arrayStack.pop() + "\n");
+        //     loopPop--;
+        // }
 
-//        System.out.println(arrayStack.push("google.com"));
-//        System.out.println(arrayStack.peek());
-//        System.out.println(arrayStack.push("dantri.vn"));
-//        System.out.println(arrayStack.peek());
-//        System.out.println(arrayStack.push("tuoitre.com"));
-//        System.out.println(arrayStack.peek());
-//        System.out.println(arrayStack.push("facebook.com"));
-//        System.out.println(arrayStack.peek());
-//        System.out.println(arrayStack.show());
-//        System.out.println(arrayStack.pop() + "\n");
-//        System.out.println(arrayStack.show());
+       System.out.println(arrayStack.push("google.com"));
+       System.out.println(arrayStack.peek());
+       System.out.println(arrayStack.push("dantri.vn"));
+       System.out.println(arrayStack.peek());
+       System.out.println(arrayStack.push("tuoitre.com"));
+       System.out.println(arrayStack.peek());
+       System.out.println(arrayStack.push("facebook.com"));
+       System.out.println(arrayStack.peek());
+       System.out.println(arrayStack.show());
+       System.out.println("pop= "+arrayStack.pop() + "\n");
+       System.out.println(arrayStack.show());
         System.out.println("\n");
 //linkedListStack 
 //        LinkedListStack linkedListStack = new LinkedListStack();
