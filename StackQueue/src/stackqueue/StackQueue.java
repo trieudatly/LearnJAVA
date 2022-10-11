@@ -7,16 +7,16 @@ public class StackQueue {
         ArrayStack arrayStack = new ArrayStack();
 //code for testing.
 
-        // int loopPush = 100;
-        // int loopPop = 100;
-        // while (loopPush > 0) {
-        //     System.out.println(arrayStack.push("facebook.com"));
-        //     loopPush--;
-        // }
-        // while (loopPop > 0) {
-        //     System.out.println(arrayStack.pop() + "\n");
-        //     loopPop--;
-        // }
+//        int loopPush = 100;
+//        int loopPop = 100;
+//        while (loopPush > 0) {
+//            System.out.println(arrayStack.push("facebook.com"));
+//            loopPush--;
+//        }
+//        while (loopPop > 0) {
+//            System.out.println(arrayStack.pop() + "\n");
+//            loopPop--;
+//        }
         System.out.println(arrayStack.push("google.com"));
         System.out.println(arrayStack.peek());
         System.out.println(arrayStack.push("dantri.vn"));
@@ -29,7 +29,7 @@ public class StackQueue {
         System.out.println("pop= " + arrayStack.pop() + "\n");
         System.out.println(arrayStack.show());
         System.out.println("\n");
-//linkedListStack 
+//linked ListStack 
 //        LinkedListStack linkedListStack = new LinkedListStack();
 //        System.out.println(linkedListStack.push("google.com"));
 //        System.out.println(linkedListStack.peek());
