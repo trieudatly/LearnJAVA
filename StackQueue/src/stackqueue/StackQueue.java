@@ -5,7 +5,7 @@ public class StackQueue {
     public static void main(String[] args) {
 //ArrayStack 
         ArrayStack arrayStack = new ArrayStack();
-//code for testing
+//code for testing.
 
         // int loopPush = 100;
         // int loopPop = 100;
