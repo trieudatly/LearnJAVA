@@ -34,7 +34,7 @@ public class ArrayStack implements IArrayStack {
             String value = stackArray[topIndex];
             topIndex--;
             //System.out.println("pop " + stackArray.length + " index " + topIndex);
-            if (stackArray.length / 4 == topIndex + 1 && stackArray.length > 8) {
+            if (stackArray.length == (topIndex + 1) * 4 && stackArray.length > 8) {
                 stackArray = Arrays.copyOf(stackArray, stackArray.length / 2);
                 //System.out.println("popif " + stackArray.length + " index " + topIndex);
             }

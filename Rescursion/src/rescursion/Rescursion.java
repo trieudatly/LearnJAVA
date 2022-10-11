@@ -18,10 +18,11 @@ public class Rescursion {
         int fac = n * GiaiThua(n - 1);
         return fac;
     }
-//tìm số fibonaci thứ n
 
+//tìm số fibonaci thứ n
     public static int Fibonaci(int n) {
 //bài toán cơ sở
+        // System.out.println("Tinh: F[" + n + "]");
         if (n == 0) {
             return 0;
         }
@@ -31,15 +32,60 @@ public class Rescursion {
         int fibo = Fibonaci(n - 1) + Fibonaci(n - 2);
         return fibo;
     }
+    static int[] f = new int[1000];
+//
+//
+// đệ quy có nhớ
+
+    public static int Fibo2(int n) {
+        if (f[n] != 0) {
+            return f[n];
+        }
+        //System.out.println("can tinh f[" + n + "]");
+        if (n == 0) {
+            return 0;
+        }
+        if (n <= 2) {
+
+            f[1] = 1;
+            f[2] = 1;
+            return 1;
+        }
+        f[n] = Fibo2(n - 1) + Fibo2(n - 2);
+        return f[n];
+    }
+
+    //
+    //
+    //
+    //in các phần tử trong một mảng
+    public static void printArray(int[] arr, int index) {
+        //bài toán cơ sở
+        if (index < 0 || index >= arr.length) {
+            return;
+        }
+        System.out.println(arr[index]);
+        printArray(arr, index + 1);
+
+    }
 
     public static void main(String[] args) {
 
         // test giai thừa
-        System.out.println(GiaiThua(4));
-
-        //test fibonaci
-        System.out.println(Fibonaci(0));
-
+//        System.out.println(GiaiThua(4));
+//        System.out.println("\n");
+//
+//        //test fibonaci
+//        System.out.println(Fibonaci(5));
+//        System.out.println("\n");
+//
+        //test in mảng
+        //int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        //printArray(arr, 0);
+        //
+        //test fibo2
+        System.out.println(Fibo2(5));
+        System.out.println("\n");
     }
 
 }
