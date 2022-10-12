@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class ArrayStack implements IArrayStack {
 
-    private String[] stackArray = new String[8];
+    private final int ARRAY_LENGHT_INCREASE_RATE = 2;//The array's increase rate
+    private int arrayInitialValue = ARRAY_LENGHT_INCREASE_RATE * ARRAY_LENGHT_INCREASE_RATE * ARRAY_LENGHT_INCREASE_RATE;
+    private String[] stackArray = new String[arrayInitialValue];
     private int topIndex;
 
     ArrayStack() {
@@ -20,7 +22,7 @@ public class ArrayStack implements IArrayStack {
     public boolean push(String value) {
         //System.out.println("lenght " + stackArray.length + " index " + topIndex);
         if (isFull()) {
-            stackArray = Arrays.copyOf(stackArray, stackArray.length * 2);
+            stackArray = Arrays.copyOf(stackArray, stackArray.length * ARRAY_LENGHT_INCREASE_RATE);
             //System.out.println("pushif lenght " + stackArray.length + " index " + topIndex);
         }
         topIndex++;
@@ -34,8 +36,8 @@ public class ArrayStack implements IArrayStack {
             String value = stackArray[topIndex];
             topIndex--;
             //System.out.println("pop " + stackArray.length + " index " + topIndex);
-            if (stackArray.length == (topIndex + 1) * 4 && stackArray.length > 8) {
-                stackArray = Arrays.copyOf(stackArray, stackArray.length / 2);
+            if (stackArray.length == (topIndex + 1) * ARRAY_LENGHT_INCREASE_RATE * ARRAY_LENGHT_INCREASE_RATE && stackArray.length > arrayInitialValue) {
+                stackArray = Arrays.copyOf(stackArray, stackArray.length / ARRAY_LENGHT_INCREASE_RATE);
                 //System.out.println("popif " + stackArray.length + " index " + topIndex);
             }
             return value;

@@ -6,12 +6,11 @@ public class StackQueue {
 //ArrayStack 
         ArrayStack arrayStack = new ArrayStack();
 //code for testing.
-
-//        int loopPush = 100;
-//        int loopPop = 100;
-//        while (loopPush > 0) {
+//        int loop = 200;
+//        int loopPop = loop;
+//        while (loop > 0) {
 //            System.out.println(arrayStack.push("facebook.com"));
-//            loopPush--;
+//            loop--;
 //        }
 //        while (loopPop > 0) {
 //            System.out.println(arrayStack.pop() + "\n");
