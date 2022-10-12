@@ -35,7 +35,7 @@ public class ArrayStack implements IArrayStack {
         return true;
     }
 /**Return the String value at the top of the stack's array and decrease the top index.
- * After that, if the array's lenght is too long, then reduce it base on ARRAY_LENGHT_INCREASE_RATE to save space.
+ * After that, if the array's lenght is too long, then reduce it based on ARRAY_LENGHT_INCREASE_RATE to save space.
  * Return blank if the stack is empty. 
 */
     @Override
