@@ -34,9 +34,10 @@ public class ArrayStack implements IArrayStack {
     }
 
     /**
-     * Add a string value to the top of the stack's array and return true. If
-     * the array is full, then increase the array's length based on
+     * Add a string value to the top of the stack's array and return true.If the
+     * array is full, then increase the array's length based on
      * {@link ARRAY_LENGHT_INCREASE_RATE}
+     *
      */
     @Override
     public boolean push(String value) {
@@ -102,9 +103,6 @@ public class ArrayStack implements IArrayStack {
      * Check if the stack's array is full
      */
     private boolean isFull() {
-        if (topIndex < stackArray.length - 1) {
-            return false;
-        }
-        return true;
+        return topIndex >= stackArray.length - 1;
     }
 }
