@@ -24,8 +24,7 @@ public class ArrayStackTest {
         assertFalse(instance.isEmpty());
         instance.pop();
         assertTrue(instance.isEmpty());
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+
     }
 
     /**
@@ -38,8 +37,7 @@ public class ArrayStackTest {
         for (int i = 0; i < 100; i++) {
             assertTrue(instance.push("facebook.com"));
         }
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+
     }
 
     /**
@@ -57,8 +55,7 @@ public class ArrayStackTest {
         assertEquals("google.com", instance.pop());
         assertEquals("facebook.com", instance.pop());
         assertEquals("", instance.pop());
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+
     }
 
     /**
